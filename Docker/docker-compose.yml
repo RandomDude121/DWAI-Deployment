@@ -13,17 +13,17 @@ services:
       # - connector
     # container_name: assignmentprojectservice
     
-  authenticationservice:
-    image: ${DOCKER_REGISTRY}authenticationservice
-    networks:
-      - connector
-    container_name: authenticationservice
+    #authenticationservice:
+    #image: ${DOCKER_REGISTRY}authenticationservice
+    #networks:
+    #- connector
+    #container_name: authenticationservice
     
   configurationservice:
     image: ${DOCKER_REGISTRY}configurationservice
     networks:
       - connector
-    container_name: projectservice
+    container_name: configurationservice
 
   developerprojectservice:
     image: ${DOCKER_REGISTRY}developerprojectservice
@@ -67,11 +67,11 @@ services:
       - connector
     container_name: testqueueservice
     
-  testresultservice:
-    image: ${DOCKER_REGISTRY}testresultservice
-    networks:
-      - connector
-    container_name: testresultservice
+    #testresultservice:
+    #image: ${DOCKER_REGISTRY}testresultservice
+    #networks:
+    #- connector
+    #container_name: testresultservice
     
   testservice:
     image: ${DOCKER_REGISTRY}testservice

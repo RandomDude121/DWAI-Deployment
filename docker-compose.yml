@@ -1,0 +1,83 @@
+version: '3.4'
+
+services:
+  appservice:
+    image: ${DOCKER_REGISTRY}appservice
+    networks:
+      - connector
+    container_name: appservice
+    
+  # assignmentprojectservice:
+    # image: ${DOCKER_REGISTRY}assignmentprojectservice
+    # networks:
+      # - connector
+    # container_name: assignmentprojectservice
+    
+  authenticationservice:
+    image: ${DOCKER_REGISTRY}authenticationservice
+    networks:
+      - connector
+    container_name: authenticationservice
+    
+  configurationservice:
+    image: ${DOCKER_REGISTRY}configurationservice
+    networks:
+      - connector
+    container_name: projectservice
+
+  developerprojectservice:
+    image: ${DOCKER_REGISTRY}developerprojectservice
+    networks:
+      - connector
+    container_name: developerprojectservice
+    
+  deviceservice:
+    image: ${DOCKER_REGISTRY}deviceservice
+    networks:
+      - connector
+    container_name: deviceservice
+    
+  gatewayservice:
+    image: ${DOCKER_REGISTRY}gatewayservice
+    networks:
+      - connector
+    container_name: gatewayservice
+    
+  projectservice:
+    image: ${DOCKER_REGISTRY}projectservice
+    networks:
+      - connector
+    container_name: projectservice
+    
+  testconstructorservice:
+    image: ${DOCKER_REGISTRY}testconstructorservice
+    networks:
+      - connector
+    container_name: testconstructorservice
+    
+  testexecutorservice:
+    image: ${DOCKER_REGISTRY}testexecutorservice
+    networks:
+      - connector
+    container_name: testexecutorservice
+    
+  testqueueservice:
+    image: ${DOCKER_REGISTRY}testqueueservice
+    networks:
+      - connector
+    container_name: testqueueservice
+    
+  testresultservice:
+    image: ${DOCKER_REGISTRY}testresultservice
+    networks:
+      - connector
+    container_name: testresultservice
+    
+  testservice:
+    image: ${DOCKER_REGISTRY}testservice
+    networks:
+      - connector
+    container_name: testservice
+  
+networks:
+  connector: {}

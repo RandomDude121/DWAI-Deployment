@@ -105,5 +105,24 @@ services:
       - connector
     container_name: testservice
   
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - connector
+    container_name: mongo
+    
+  elk:
+    image: sebp/elk
+    ports:
+      - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+    networks:
+      - connector
+    container_name: elk
+  
 networks:
   connector: {}
+    name: connector

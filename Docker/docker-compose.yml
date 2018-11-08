@@ -124,5 +124,5 @@ services:
     container_name: elk
   
 networks:
-  connector: {}
+  connector:
     name: connector
